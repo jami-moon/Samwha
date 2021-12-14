@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+.issue {
+  max-width: 100%;
+  margin-top: 200px;
+}
+.issue__title {
+  font-size: 100px;
+  letter-spacing: -3px;
+}
+.issue__intro {
+  padding-top: 80px;
+  padding-left: 200px;
+  font-size: 22px;
+  letter-spacing: -1px;
+  font-weight: 500;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+.issue__cont {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.issue .magazine {
+  position: sticky;
+  top: 50%;
+  width: 15%;
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+.magazine {
+  width: 180px;
+}
+.magazine__img {
+  width: 100%;
+  height: 232px;
+  background-image: url(../img/magazine.JPG);
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  background-size: contain;
+}
+.magazine strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: -1px;
+}
+.magazine__showPDF {
+  display: block;
+  margin-top: 15px;
+  font-size: 16px;
+  letter-spacing: -1px;
+}
+.magazine__showAll {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+.issue__list {
+  width: 85%;
+  height: 2600px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  position: relative;
+}
+.issue__list li {
+  width: 500px;
+  padding-left: 100px;
+  padding-bottom: 150px;
+  position: relative;
+}
+.issue__list li:nth-child(5) {
+  top: -300px;
+}
+.issue__list li:nth-child(7) {
+  top: -450px;
+}
+.issue__list-img {
+  width: 100%;
+}
+.issue__list-category {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: -35px;
+  transform: rotate(270deg);
+  transform-origin: 0% 0%;
+  font-size: 20px;
+  font-weight: 400;
+  color: #888;
+}
+.issue__list-cap {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 500;
+  word-break: keep-all;
+}
+.issue__list li:first-child {
+  align-self: flex-end;
+}
+.issue__list p {
+  word-break: keep-all;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .issue {
+    margin-top: 100px;
+  }
+  .issue__title {
+    padding-left: 50px;
+    font-size: 90px;
+  }
+  .issue__intro {
+    padding-top: 30px;
+  }
+  .issue__cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  .issue .magazine {
+    position: static;
+    margin-bottom: 40px;
+    text-align: center;
+    width: auto;
+  }
+  .magazine strong {
+    margin-top: 0;
+  }
+  .issue__list {
+    width: 100%;
+    height: 100%;
+    padding: 0 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .issue__list li {
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-bottom: 50px;
+  }
+  .issue__list li:first-child {
+    align-self: auto;
+  }
+  .issue__list li:nth-child(5) {
+    top: 0;
+  }
+  .issue__list li:nth-child(7) {
+    top: 0;
+  }
+  .issue__list-cap {
+    text-align: center;
+  }
+  .issue__list p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  .issue__title {
+    padding-left: 0;
+    text-align: center;
+  }
+  .issue__intro {
+    margin-top: 50px;
+    padding: 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .issue__list {
+    padding: 0;
+  }
+  .issue__list-category {
+    display: none;
+  }
+  .issue__list-cap {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .issue__title {
+    font-size: 70px;
+  }
+  .issue__intro {
+    font-size: 20px;
+  }
+  .issue__list-cap {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+  .issue__list p {
+    font-size: 14px;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .issue__list li {
+    width: 100vw;
+  }
+  .issue__list li {
+    height: auto;
+    object-fit: contain;
+  }
+}

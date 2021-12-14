@@ -1,0 +1,314 @@
+@charset "UTF-8";
+
+.insp {
+  height: 2032px;
+  background-image: url(../img/inspiration_bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.insp__title {
+  padding: 150px 0 50px 50px;
+  color: white;
+  font-size: 140px;
+  letter-spacing: -2px;
+}
+.insp__intro {
+  margin-left: 200px;
+  font-size: 22px;
+  line-height: 1.7;
+  color: white;
+  letter-spacing: -1px;
+  word-break: keep-all;
+}
+.insp__link {
+  display: block;
+  width: 580px;
+  height: 870px;
+  margin-top: 100px;
+  background-image: url(../img/inspiration_concept.jpg);
+  background-repeat: no-repeat;
+}
+.insp__find-store {
+  display: inline-block;
+  width: 580px;
+  margin-top: 80px;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  letter-spacing: -1px;
+  position: relative;
+}
+.insp__find-store::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 32%;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/pin-white.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.insp__color-list {
+  width: 740px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 800px;
+  right: -210px;
+}
+.insp__color-info {
+  position: relative;
+  width: 300px;
+  height: 380px;
+  background-color: white;
+  margin-right: 70px;
+  margin-bottom: 50px;
+}
+.insp__color-info::before {
+  content: "";
+  display: block;
+  width: 285px;
+  height: 285px;
+  margin: 5px auto;
+}
+.insp__color-info:nth-of-type(2n) {
+  top: -80px;
+  margin-right: 0;
+}
+.insp__color-info:nth-of-type(1)::before {
+  background-color: #005171;
+}
+.insp__color-info:nth-of-type(2)::before {
+  background-color: #7e9aaa;
+}
+.insp__color-info:nth-of-type(3)::before {
+  background-color: #98b2c6;
+}
+.insp__color-info:nth-of-type(4)::before {
+  background-color: #bdc8d2;
+}
+.insp__color-info--name {
+  display: block;
+  margin: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.insp__color-info--code {
+  display: block;
+  margin-left: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+}
+.insp__button {
+  position: absolute;
+  top: 230px;
+  right: 20px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  outline: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.insp__button--copy {
+  right: 70px;
+  background-image: url(../img/icon-copy.svg);
+}
+.insp__button--popup {
+  background-image: url(../img/icon-fullscreen.svg);
+  transition-duration: 0.5s;
+}
+.insp__color-info:hover .insp__button {
+  visibility: visible;
+  opacity: 1;
+}
+.insp__color-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.insp__color-popup:nth-child(1) {
+  background-color: #005171;
+}
+.insp__color-popup:nth-child(2) {
+  background-color: #7e9aaa;
+}
+.insp__color-popup:nth-child(3) {
+  background-color: #98b2c6;
+}
+.insp__color-popup:nth-child(4) {
+  background-color: #bdc8d2;
+}
+.insp__color-popup.open {
+  visibility: visible;
+  opacity: 1;
+}
+body.popup-open {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.popup-cont {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 0 50px;
+  background-color: #fff;
+}
+.popup-color strong {
+  font-size: 35px;
+  font-weight: 700;
+  margin-right: 30px;
+}
+.popup-color span {
+  font-size: 20px;
+}
+.popup-btn-group .popup-btn {
+  position: relative;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  background: 0;
+  font-size: 18px;
+  font-weight: 700;
+  padding-left: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.popup-btn--copy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url(../img/icon-copy.svg) no-repeat center;
+  background-size: contain;
+}
+.popup-btn--store::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url(../img/icon-store.svg) no-repeat center;
+  background-size: contain;
+}
+.popup-close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.popup-close::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  transform-origin: 50% 50%;
+  transform: rotate(45deg);
+  top: 14px;
+  left: 0;
+}
+.popup-close::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  transform-origin: 50% 50%;
+  transform: rotate(-45deg);
+  top: 14px;
+  left: 0;
+}
+
+@media screen and (max-width: 1500px) {
+  .insp__title {
+    font-size: 120px;
+  }
+  .insp {
+    height: 100%;
+  }
+  .insp__intro {
+    margin-bottom: 100px;
+  }
+  .insp__link {
+    display: none;
+  }
+  .insp__color-list {
+    width: 680px;
+    position: static;
+    margin: 0 auto;
+    padding-bottom: 100px;
+  }
+  .insp__find-store {
+    position: absolute;
+    margin-top: 0;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+@media screen and (max-width: 700px) {
+  .insp__title {
+    font-size: 90px;
+    text-align: center;
+    padding: 100px 0 0;
+    margin-bottom: 50px;
+  }
+  .insp__intro {
+    text-align: center;
+    padding: 0;
+    margin-left: 0;
+    font-size: 20px;
+  }
+  .insp__color-list {
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .insp__color-info {
+    margin-right: 0;
+  }
+  .insp__color-info:nth-of-type(2n) {
+    top: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .insp__title {
+    font-size: 70px;
+  }
+}
